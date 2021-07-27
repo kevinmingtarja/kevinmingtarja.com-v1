@@ -4,6 +4,7 @@ declare module "*.scss" {
 }
 
 declare module "*.css" {
+  // eslint-disable-next-line one-var
   const classes: { readonly [key: string]: string }
   export default classes
 }

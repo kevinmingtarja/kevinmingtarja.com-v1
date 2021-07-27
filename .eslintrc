@@ -1,17 +1,15 @@
 {
   "extends": [
     "plugin:prettier/recommended",
-    "prettier",
-    "kentcdodds",
     "kentcdodds/react",
     "kentcdodds/jsx-a11y",
-    "plugin:@next/next/recommended",
-    "plugin:cypress/recommended"
+    "next",
+    "next/core-web-vitals",
+    "prettier"
   ],
-  "plugins": ["prettier", "simple-import-sort", "cypress", "chai-friendly"],
+  "plugins": ["prettier", "simple-import-sort"],
   "rules": {
     "@babel/new-cap": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
     "import/extensions": [
       "warn",
       "never",
@@ -25,28 +23,25 @@
     "import/no-extraneous-dependencies": "warn",
     "import/order": "off",
     "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/accessible-emoji": "off",
+    "react/jsx-sort-props": ["warn", { "reservedFirst": ["key"] }],
+    "react/react-in-jsx-scope": ["off"],
+    "@babel/no-unused-expressions": 0,
     "simple-import-sort/exports": "warn",
     "simple-import-sort/imports": [
       "warn",
       {
         "groups": [
-          ["^.+\\.s?css$"],
           ["^\\u0000"],
-          ["^react$"],
-          ["^~"],
+          ["^react$", "^"],
+          ["^~/"],
+          ["^~/components"],
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"]
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.s?css$"]
         ]
       }
-    ],
-    "sort-imports": "off",
-
-    "jsx-a11y/accessible-emoji": "off",
-    "react/jsx-sort-props": ["warn", { "reservedFirst": ["key"] }],
-    "react/react-in-jsx-scope": ["off"],
-    "cypress/no-unnecessary-waiting": "warn",
-    "@babel/no-unused-expressions": 0,
-    "chai-friendly/no-unused-expressions": 2
+    ]
   },
 
   "overrides": [
