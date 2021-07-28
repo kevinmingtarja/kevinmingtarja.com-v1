@@ -13,7 +13,7 @@ export type Props = {
   size?: "xs" | "sm" | "md" | "lg" | "xl"
   bold?: boolean
   semibold?: boolean
-  type?:
+  color?:
     | "black"
     | "danger"
     | "gray"
@@ -38,7 +38,7 @@ const Text = (props: Props) => {
     size,
     bold,
     semibold,
-    type,
+    color,
     uppercase,
     span,
   } = props
@@ -56,16 +56,16 @@ const Text = (props: Props) => {
       [styles.md]: size === "md",
       [styles.lg]: size === "lg",
       [styles.xl]: size === "xl",
-      [styles.gray]: type === "gray",
-      [styles.light]: type === "light",
-      [styles.lighter]: type === "lighter",
-      [styles.lightest]: type === "lightest",
-      [styles.black]: type === "black",
-      [styles.white]: type === "white",
-      [styles.primary]: type === "primary",
-      [styles.success]: type === "success",
-      [styles.danger]: type === "danger",
-      [styles.warning]: type === "warning",
+      [styles.gray]: color === "gray",
+      [styles.light]: color === "light",
+      [styles.lighter]: color === "lighter",
+      [styles.lightest]: color === "lightest",
+      [styles.black]: color === "black",
+      [styles.white]: color === "white",
+      [styles.primary]: color === "primary",
+      [styles.success]: color === "success",
+      [styles.danger]: color === "danger",
+      [styles.warning]: color === "warning",
     },
     className,
   )

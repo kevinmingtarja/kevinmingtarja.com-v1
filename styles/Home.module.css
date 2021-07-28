@@ -1,20 +1,35 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
   height: 100vh;
 }
 
 .main {
-  padding: 5rem 0;
+  padding: var(--spacing-7xl);
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.intro {
+}
+
+.subheading {
+  margin-bottom: var(--spacing-2xs);
+}
+
+.info {
+  width: 40vw;
+  margin-top: var(--spacing-sm);
+}
+
+.ctaButton {
+  width: 20vw;
+
+  margin-top: var(--spacing-3xl);
 }
 
 .footer {

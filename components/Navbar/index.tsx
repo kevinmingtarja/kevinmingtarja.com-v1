@@ -24,27 +24,27 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink href="/">
-          <Heading level={1}>Kevin Mingtarja</Heading>
+          <Heading level={5}>Kevin Mingtarja</Heading>
         </NavLink>
 
         <NavMenu>
-          <NavLink href="/about">
-            <Heading level={1}>About</Heading>
+          <NavLink href="/about" className={styles["nav-menu-item"]}>
+            <Heading level={5}>About</Heading>
           </NavLink>
-          <NavLink href="/blog">
-            <Heading level={1}>Blog</Heading>
+          <NavLink href="/blog" className={styles["nav-menu-item"]}>
+            <Heading level={5}>Blog</Heading>
           </NavLink>
-          <NavLink href="/experience">
-            <Heading level={1}>Experience</Heading>
+          <NavLink href="/experience" className={styles["nav-menu-item"]}>
+            <Heading level={5}>Experience</Heading>
           </NavLink>
-          <NavLink href="/projects">
-            <Heading level={1}>Projects</Heading>
+          <NavLink href="/projects" className={styles["nav-menu-item"]}>
+            <Heading level={5}>Projects</Heading>
           </NavLink>
         </NavMenu>
 
-        <NavLink href="/">
-          <Heading level={1}>Contact</Heading>
-        </NavLink>
+        {/* <NavLink href="/contact">
+          <Heading level={5}>Contact</Heading>
+        </NavLink> */}
 
         {width <= 768 && (
           <div className={styles.hamburger}>
@@ -72,17 +72,28 @@ export const Nav = ({ children, backgroundColor, color }: NavProps) => {
 
 interface NavLinkProps extends LinkProps {
   children: React.ReactNode
+  className?: string
 }
 
-export const NavLink = ({ children, href, ...linkProps }: NavLinkProps) => {
+export const NavLink = ({
+  children,
+  href,
+  className,
+  ...linkProps
+}: NavLinkProps) => {
   const router = useRouter()
 
   return (
     <Link {...linkProps} href={href} passHref>
       <a
-        className={cx(styles["nav-link"], {
-          [styles["nav-link-active"]]: router.asPath === href,
-        })}
+        className={cx(
+          styles["nav-link"],
+          {
+            [styles["nav-link-active"]]:
+              router.asPath === href && router.asPath !== "/",
+          },
+          className,
+        )}
       >
         {children}
       </a>

@@ -9,34 +9,26 @@ export type Props = {
   centered?: boolean
   children?: React.ReactNode
   className?: string
-  level?: 1 | 2 | 3 | 4
+  level?: 1 | 2 | 3 | 4 | 5 | 6
   noLeading?: boolean
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl"
+
   color?: ColorName
 }
 
 const Heading = (props: Props) => {
-  const {
-    centered,
-    children,
-    className,
-    level = 1,
-    noLeading,
-    color,
-    size,
-  } = props
+  const { centered, children, className, level = 1, noLeading, color } = props
 
   const cn = cx(
     styles.heading,
     {
       [styles.centered]: centered,
       [styles.noLeading]: noLeading,
-      [styles.xs]: size === "xs",
-      [styles.sm]: size === "sm" || level === 4,
-      [styles.md]: size === "md" || level === 2,
-      [styles.lg]: size === "lg",
-      [styles.xl]: size === "xl" || level === 1,
-      [styles.twoxl]: size === "2xl",
+      [styles.sm]: level === 6,
+      [styles.md]: level === 5,
+      [styles.lg]: level === 4,
+      [styles.xl]: level === 3,
+      [styles.twoxl]: level === 2,
+      [styles.threexl]: level === 1,
     },
     className,
   )

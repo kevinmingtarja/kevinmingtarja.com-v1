@@ -78,14 +78,15 @@ code {
   --true-black-80: rgba(0, 0, 0, 0.8);
 
   /* FONT SIZES */
-  --font-2xl: 30px;
-  --font-xl: 24px;
-  --font-lg: 20px;
-  --font-md: 18px;
-  --font-base: 16px;
-  --font-sm: 14px;
-  --font-xs: 12px;
-  --font-2xs: 11px;
+  --font-3xl: 56px;
+  --font-2xl: 40px;
+  --font-xl: 32px;
+  --font-lg: 28px;
+  --font-md: 24px;
+  --font-base: 20px;
+  --font-sm: 16px;
+  --font-xs: 14px;
+  --font-2xs: 12px;
 
   /* SPACING */
   --spacing-3xs: 2px;
@@ -100,6 +101,8 @@ code {
   --spacing-3xl: 56px;
   --spacing-4xl: 64px;
   --spacing-5xl: 80px;
+  --spacing-6xl: 96px;
+  --spacing-7xl: 112px;
 
   /* ICONS */
   --icon-3xs: 12px;

@@ -1,6 +1,7 @@
 .text {
   color: var(--black);
   font-size: var(--font-base);
+  margin: 0;
 
   &.centered {
     text-align: center;
