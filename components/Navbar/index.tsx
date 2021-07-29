@@ -28,16 +28,16 @@ const Navbar = () => {
         </NavLink>
 
         <NavMenu>
-          <NavLink href="/about" className={styles["nav-menu-item"]}>
+          <NavLink className={styles["nav-menu-item"]} href="/about">
             <Heading level={5}>About</Heading>
           </NavLink>
-          <NavLink href="/blog" className={styles["nav-menu-item"]}>
+          <NavLink className={styles["nav-menu-item"]} href="/blog">
             <Heading level={5}>Blog</Heading>
           </NavLink>
-          <NavLink href="/experience" className={styles["nav-menu-item"]}>
+          <NavLink className={styles["nav-menu-item"]} href="/experience">
             <Heading level={5}>Experience</Heading>
           </NavLink>
-          <NavLink href="/projects" className={styles["nav-menu-item"]}>
+          <NavLink className={styles["nav-menu-item"]} href="/projects">
             <Heading level={5}>Projects</Heading>
           </NavLink>
         </NavMenu>

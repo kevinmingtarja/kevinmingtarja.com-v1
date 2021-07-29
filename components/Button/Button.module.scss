@@ -9,8 +9,7 @@
   padding: var(--spacing-md) var(--spacing-base);
   background-color: var(--true-black);
   color: var(--white);
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    box-shadow 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 0.1s linear;
   width: 100%;
   overflow-wrap: break-word;
   cursor: pointer;
