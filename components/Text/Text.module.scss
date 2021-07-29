@@ -91,3 +91,9 @@
     color: var(--warning);
   }
 }
+
+@media (max-width: 480px) {
+  .text {
+    font-size: var(--font-base);
+  }
+}

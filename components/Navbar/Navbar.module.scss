@@ -1,10 +1,12 @@
 .nav {
-  background: var(--white);
-
+  position: absolute;
+  background-color: var(--white);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: var(--spacing-2xl) var(--spacing-7xl);
+  padding: var(--spacing-2xl) var(--spacing-7xl) var(--spacing-xs)
+    var(--spacing-7xl);
   z-index: 1000;
 }
 
@@ -44,14 +46,6 @@
   &::after {
     border-bottom: solid 3px #0070f3;
   }
-  //   &::after {
-  //     display: block;
-  //     content: "";
-  //     border-bottom: solid 3px var(--true-black);
-  //     transform: scaleX(1);
-  //     transition: transform 250ms ease-in-out;
-  //     transform-origin: 100% 50%;
-  //   }
 }
 
 .nav-menu-item {
@@ -83,5 +77,20 @@
 
   .navmenu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
+  }
+
+  .info {
+    width: auto;
+  }
+
+  .ctaButton {
+    min-width: 162.5px;
+    width: 50vw;
   }
 }

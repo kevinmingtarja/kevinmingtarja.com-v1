@@ -12,8 +12,6 @@ import styles from "./Navbar.module.scss"
 
 interface NavProps {
   children: React.ReactNode
-  color?: string
-  backgroundColor?: string
 }
 
 const Navbar = () => {
@@ -42,32 +40,19 @@ const Navbar = () => {
           </NavLink>
         </NavMenu>
 
-        {/* <NavLink href="/contact">
-          <Heading level={5}>Contact</Heading>
-        </NavLink> */}
-
-        {width <= 768 && (
-          <div className={styles.hamburger}>
-            <Hamburger toggle={setOpen} toggled={isOpen} />
-          </div>
-        )}
+        <div className={styles.hamburger}>
+          <Hamburger toggle={setOpen} toggled={isOpen} />
+        </div>
       </Nav>
-      <Sidebar backgroundColor="#001A56" isOpen={isOpen} setOpen={setOpen} />
+      <Sidebar isOpen={isOpen} setOpen={setOpen} />
     </>
   )
 }
 
 export default Navbar
 
-export const Nav = ({ children, backgroundColor, color }: NavProps) => {
-  return (
-    <nav
-      className={styles.nav}
-      style={{ backgroundColor: backgroundColor as string }}
-    >
-      {children}
-    </nav>
-  )
+export const Nav = ({ children }: NavProps) => {
+  return <nav className={styles.nav}>{children}</nav>
 }
 
 interface NavLinkProps extends LinkProps {

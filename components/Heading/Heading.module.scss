@@ -11,12 +11,12 @@
     line-height: 1;
   }
 
-  &.xs {
-    font-size: var(--font-xs);
-  }
-
   &.sm {
     font-size: var(--font-sm);
+  }
+
+  &.base {
+    font-size: var(--font-base);
   }
 
   &.md {
@@ -40,5 +40,23 @@
 
   &.threexl {
     font-size: var(--font-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    &.threexl {
+      font-size: var(--font-2xl);
+    }
+
+    &.twoxl {
+      font-size: var(--font-xl);
+      line-height: 38px;
+    }
+
+    &.xl {
+      font-size: var(--font-lg);
+      line-height: var(--font-xl);
+    }
   }
 }

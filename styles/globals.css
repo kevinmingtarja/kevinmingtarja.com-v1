@@ -103,6 +103,7 @@ code {
   --spacing-5xl: 80px;
   --spacing-6xl: 96px;
   --spacing-7xl: 112px;
+  --top-inset: 224px;
 
   /* ICONS */
   --icon-3xs: 12px;

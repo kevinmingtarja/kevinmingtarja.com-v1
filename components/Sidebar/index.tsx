@@ -18,20 +18,17 @@ const Sidebar = ({
     <SidebarContainer backgroundColor={backgroundColor} isOpen={isOpen}>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink color="#fff" href="about">
-            <Heading level={2}>Placeholder</Heading>
+          <SidebarLink href="about">
+            <Heading level={6}>Placeholder</Heading>
           </SidebarLink>
-          <SidebarLink color="#fff" href="discover">
-            <Heading level={2}>Placeholder</Heading>
+          <SidebarLink href="discover">
+            <Heading level={6}>Placeholder</Heading>
           </SidebarLink>
-          <SidebarLink color="#fff" href="services">
-            <Heading level={2}>Placeholder</Heading>
+          <SidebarLink href="services">
+            <Heading level={6}>Placeholder</Heading>
           </SidebarLink>
-          <SidebarLink color="#fff" href="signup">
-            <Heading level={2}>Placeholder</Heading>
-          </SidebarLink>
-          <SidebarLink color="#fff" href="signup">
-            <Heading level={2}>Placeholder</Heading>
+          <SidebarLink href="signup">
+            <Heading level={6}>Placeholder</Heading>
           </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>

@@ -8,7 +8,8 @@
 }
 
 .main {
-  padding: var(--spacing-7xl);
+  padding: max(30vh, var(--top-inset)) var(--spacing-7xl) var(--spacing-base)
+    var(--spacing-7xl);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -18,21 +19,36 @@
 }
 
 .subheading {
-  margin-bottom: var(--spacing-2xs);
+  margin-bottom: var(--spacing-xs);
 }
 
 .info {
   width: 40vw;
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
 }
 
 .ctaButton {
   width: 20vw;
-
   margin-top: var(--spacing-3xl);
 }
 
-.title a {
+@media (max-width: 480px) {
+  .main {
+    padding: var(--top-inset) var(--spacing-lg) var(--spacing-base)
+      var(--spacing-lg);
+  }
+
+  .info {
+    width: auto;
+  }
+
+  .ctaButton {
+    min-width: 162.5px;
+    width: 50vw;
+  }
+}
+
+/* .title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -117,4 +133,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

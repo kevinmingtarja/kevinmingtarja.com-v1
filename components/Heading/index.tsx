@@ -23,7 +23,7 @@ const Heading = (props: Props) => {
     {
       [styles.centered]: centered,
       [styles.noLeading]: noLeading,
-      [styles.sm]: level === 6,
+      [styles.base]: level === 6,
       [styles.md]: level === 5,
       [styles.lg]: level === 4,
       [styles.xl]: level === 3,

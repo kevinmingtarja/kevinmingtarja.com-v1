@@ -18,9 +18,11 @@ export default function Home() {
         <div className={styles.intro}>
           <Text className={styles.subheading}>Hey there! My name is</Text>
           <Heading level={1}>Kevin Mingtarja.</Heading>
+
           <Heading color="ash600" level={1}>
             I like to build softwares.
           </Heading>
+
           <Text className={styles.info}>
             {
               "I'm a second year computer science student studying at the National University of Singapore. I enjoy building softwares and have experience in Frontend, Backend, and Mobile development."
