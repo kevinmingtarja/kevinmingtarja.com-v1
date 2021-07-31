@@ -21,8 +21,8 @@ const Link = ({
   ...linkProps
 }: LinkProps) => {
   const cn = cx(
-    styles.link,
     {
+      [styles.link]: (children as any).type.name !== "Button",
       [styles.textLink]:
         (children as any).type.name === "Text" ||
         (children as any).type.name === "Heading",

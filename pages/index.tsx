@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 
-import { Button, Heading, Text } from "~/components/index"
+import { Button, Heading, Link, Text } from "~/components/index"
 
 import styles from "../styles/Home.module.css"
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>Kevin Mingtarja</title>
         <meta
-          content="I'm a second year student at NUS studying Computer Science"
+          content="I'm a second year student at NUS studying Computer Science at NUS"
           name="description"
         />
         <link href="/favicon.ico" rel="icon" />
@@ -19,10 +19,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.intro}>
-          <Text className={styles.subheading}>Hey there! My name is</Text>
+          <Text className={styles.introText}>Hey there! My name is</Text>
           <Heading level={1}>Kevin Mingtarja.</Heading>
 
-          <Heading color="ash600" level={1}>
+          <Heading className={styles.subheading} level={1}>
             I like to build softwares.
           </Heading>
 
@@ -32,7 +32,9 @@ export default function Home() {
             }
           </Text>
         </div>
-        <Button className={styles.ctaButton}>More about me ✋</Button>
+        <Link className={styles.ctaButton} href="/about">
+          <Button>More about me ✋</Button>
+        </Link>
         {/* <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>

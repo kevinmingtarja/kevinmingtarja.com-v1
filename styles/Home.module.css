@@ -3,13 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: 100vh;
+  margin-bottom: var(--spacing-lg);
 }
 
 .main {
-  padding: max(30vh, var(--top-inset)) var(--spacing-8xl) var(--spacing-base)
-    var(--spacing-8xl);
+  padding: max(30vh, var(--top-inset)) var(--spacing-8xl) 0 var(--spacing-8xl);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -18,8 +16,12 @@
 .intro {
 }
 
-.subheading {
+.introText {
   margin-bottom: var(--spacing-xs);
+}
+
+.subheading {
+  color: var(--primary-blue);
 }
 
 .info {

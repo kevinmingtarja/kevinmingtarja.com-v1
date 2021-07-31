@@ -47,6 +47,8 @@ code {
 :root {
   /* COLORS */
   --primary-blue: #0070f3;
+  --primary-blue-dark: #0062d2;
+  --primary-blue-light: #2f90ff;
   --success: rgb(46, 176, 98); /* #2eb062 */
   --success-10: rgba(46, 176, 98, 0.1);
   --danger: rgb(250, 74, 87); /* #fa4a57 */

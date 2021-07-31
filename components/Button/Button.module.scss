@@ -105,3 +105,15 @@
     padding: var(--spacing-xs) var(--spacing-base);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .button {
+    &:hover {
+      transform: scale(1);
+    }
+    &:active {
+      transform: scale(1);
+      opacity: 80%;
+    }
+  }
+}

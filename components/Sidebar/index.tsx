@@ -5,34 +5,40 @@ import Link from "next/link"
 import { Heading } from "../index"
 
 import styles from "./Sidebar.module.scss"
+import { SiRedhatopenshift } from "react-icons/si"
 
 const Sidebar = ({
   isOpen,
-  backgroundColor,
+  setOpen,
 }: {
   isOpen: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
-  backgroundColor?: string
 }) => {
   return (
-    <SidebarContainer backgroundColor={backgroundColor} isOpen={isOpen}>
-      <SidebarWrapper>
-        <SidebarMenu>
-          <SidebarLink href="about">
-            <Heading level={6}>Placeholder</Heading>
-          </SidebarLink>
-          <SidebarLink href="discover">
-            <Heading level={6}>Placeholder</Heading>
-          </SidebarLink>
-          <SidebarLink href="services">
-            <Heading level={6}>Placeholder</Heading>
-          </SidebarLink>
-          <SidebarLink href="signup">
-            <Heading level={6}>Placeholder</Heading>
-          </SidebarLink>
-        </SidebarMenu>
-      </SidebarWrapper>
-    </SidebarContainer>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div
+      className={cx(styles.backdrop, { [styles.backdropOpen]: isOpen })}
+      onClick={() => setOpen(false)}
+    >
+      <SidebarContainer isOpen={isOpen}>
+        <SidebarWrapper>
+          <SidebarMenu>
+            <SidebarLink href="about">
+              <Heading level={6}>About</Heading>
+            </SidebarLink>
+            <SidebarLink href="discover">
+              <Heading level={6}>Blog</Heading>
+            </SidebarLink>
+            <SidebarLink href="services">
+              <Heading level={6}>Experience</Heading>
+            </SidebarLink>
+            <SidebarLink href="signup">
+              <Heading level={6}>Projects</Heading>
+            </SidebarLink>
+          </SidebarMenu>
+        </SidebarWrapper>
+      </SidebarContainer>
+    </div>
   )
 }
 

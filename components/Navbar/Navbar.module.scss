@@ -81,6 +81,7 @@
 
 @media screen and (max-width: 480px) {
   .nav {
+    position: fixed;
     padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
   }
 
