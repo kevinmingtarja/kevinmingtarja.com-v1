@@ -46,11 +46,7 @@ code {
 /* Variables */
 :root {
   /* COLORS */
-  --primary: #002a56;
-  /* rgb(69, 135, 239); #4586ef */
-  --primaryDark: #3151aa;
-  --primary-10: rgba(69, 135, 239, 0.1);
-  --primary-05: rgba(69, 135, 239, 0.05);
+  --primary-blue: #0070f3;
   --success: rgb(46, 176, 98); /* #2eb062 */
   --success-10: rgba(46, 176, 98, 0.1);
   --danger: rgb(250, 74, 87); /* #fa4a57 */
@@ -103,6 +99,7 @@ code {
   --spacing-5xl: 80px;
   --spacing-6xl: 96px;
   --spacing-7xl: 112px;
+  --spacing-8xl: 168px;
   --top-inset: 224px;
 
   /* ICONS */

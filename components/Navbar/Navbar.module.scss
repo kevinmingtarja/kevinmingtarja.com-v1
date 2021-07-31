@@ -5,8 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-2xl) var(--spacing-7xl) var(--spacing-xs)
-    var(--spacing-7xl);
+  padding: var(--spacing-2xl) var(--spacing-8xl) var(--spacing-xs)
+    var(--spacing-8xl);
   z-index: 1000;
 }
 
@@ -30,7 +30,7 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     transform-origin: 100% 50%;
-    width: 100.5%;
+    width: 100.6%;
   }
 
   &:hover::after {
@@ -40,11 +40,10 @@
 }
 
 .nav-link-active {
-  // alternative: #0070f3
-  color: #0070f3;
+  color: var(--primary-blue);
 
   &::after {
-    border-bottom: solid 3px #0070f3;
+    border-bottom: solid 3px var(--primary-blue);
   }
 }
 

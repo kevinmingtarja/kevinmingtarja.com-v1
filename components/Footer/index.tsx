@@ -1,24 +1,43 @@
 import React from "react"
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
 
+import Link from "../Link"
 import Text from "../Text"
+
+import { links } from "./constants"
 
 import styles from "./Footer.module.scss"
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Text size="sm">To-do: Add github links etc</Text>
-      <Text size="sm">Built and Designed by Kevin Mingtarja</Text>
-      {/* <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by{" "}
-        <span className={styles.logo}>
-          
-        </span>
-      </a> */}
+      <Text className={styles.text}>Built and Designed by Kevin Mingtarja</Text>
+
+      <div className={styles.linkContainerDesktop}>
+        {links.map(({ name, href, isExternal, icon }) => (
+          <Link
+            key={name}
+            className={styles.link}
+            href={href}
+            isExternal={isExternal}
+          >
+            <Text size="sm">{name}</Text>
+          </Link>
+        ))}
+      </div>
+
+      <div className={styles.linkContainerMobile}>
+        {links.map(({ name, href, isExternal, icon }) => (
+          <Link
+            key={name}
+            className={styles.link}
+            href={href}
+            isExternal={isExternal}
+          >
+            {icon}
+          </Link>
+        ))}
+      </div>
     </footer>
   )
 }

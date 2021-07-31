@@ -8,8 +8,8 @@
 }
 
 .main {
-  padding: max(30vh, var(--top-inset)) var(--spacing-7xl) var(--spacing-base)
-    var(--spacing-7xl);
+  padding: max(30vh, var(--top-inset)) var(--spacing-8xl) var(--spacing-base)
+    var(--spacing-8xl);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,7 @@
 
 @media (max-width: 480px) {
   .main {
-    padding: var(--top-inset) var(--spacing-lg) var(--spacing-base)
-      var(--spacing-lg);
+    padding: 25vh var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   }
 
   .info {
