@@ -2,17 +2,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: var(--spacing-2xl);
+  /* margin-bottom: var(--spacing-2xl); */
+  min-height: 90vh;
 }
 
 .main {
-  padding: max(30vh, var(--top-inset)) var(--spacing-8xl) 0 var(--spacing-8xl);
+  padding: 0 var(--spacing-8xl) 0 var(--spacing-8xl);
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.intro {
+.heroSection {
+  padding-top: max(30vh, var(--top-inset)) !important;
+}
+
+.main section {
+  min-height: 100vh;
+  padding-top: 100px;
 }
 
 .introText {

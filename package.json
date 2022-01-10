@@ -19,11 +19,13 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
     "@types/react": "^17.0.15",
+    "@types/scrollreveal": "^0.0.7",
     "eslint": "7.31.0",
     "eslint-config-kentcdodds": "^19.1.1",
     "eslint-config-next": "11.0.1",

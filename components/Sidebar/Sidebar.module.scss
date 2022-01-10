@@ -1,4 +1,5 @@
 .backdrop {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -53,5 +54,11 @@
 
   &:hover {
     color: var(--primary-blue);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backdrop {
+    display: block;
   }
 }

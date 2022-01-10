@@ -1,12 +1,10 @@
 .footer {
   width: 100%;
   display: flex;
-  position: absolute;
-  bottom: 0;
 
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-xl) var(--spacing-8xl);
+  padding: 2vh var(--spacing-8xl) var(--spacing-xl) var(--spacing-8xl);
 }
 
 .text {

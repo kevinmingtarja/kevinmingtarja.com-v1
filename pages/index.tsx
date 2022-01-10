@@ -2,6 +2,7 @@ import Head from "next/head"
 import Image from "next/image"
 
 import { Button, Heading, Link, Text } from "~/components/index"
+import About from "~/components/Sections/About"
 
 import styles from "../styles/Home.module.css"
 
@@ -18,7 +19,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.intro}>
+        <section className={styles.heroSection} id="hero">
           <Text className={styles.introText}>Hey there! My name is</Text>
           <Heading level={1}>Kevin Mingtarja.</Heading>
 
@@ -31,10 +32,13 @@ export default function Home() {
             building systems and infrastructures. Currently, I&apos;m studying
             Computer Science @ National University of Singapore.
           </Text>
-        </div>
-        <Link className={styles.ctaButton} href="/about">
-          <Button>More about me ✋</Button>
-        </Link>
+
+          <Link href="/about">
+            <Button className={styles.ctaButton}>More about me ✋</Button>
+          </Link>
+        </section>
+
+        <About />
       </main>
     </div>
   )

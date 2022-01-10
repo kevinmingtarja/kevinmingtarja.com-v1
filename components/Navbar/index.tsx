@@ -1,10 +1,9 @@
 import React, { useState } from "react"
 import cx from "classnames"
 import { Squash as Hamburger } from "hamburger-react"
-import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/router"
 
-import useWindowDimensions from "~/hooks/useWindowDimensions"
+import { navLinks } from "~/constants/links"
 
 import { Heading, Sidebar } from "../index"
 
@@ -16,30 +15,33 @@ interface NavProps {
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
-  const { height, width } = useWindowDimensions()
+  const handleClick = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    }
+  }
 
   return (
     <>
       <Nav>
-        <NavLink href="/">
-          <Heading level={5} className={styles.heading}>
+        <NavLink>
+          <Heading className={styles.heading} level={5}>
             Kevin Mingtarja
           </Heading>
         </NavLink>
 
         <NavMenu>
-          <NavLink className={styles["nav-menu-item"]} href="/about">
-            <Heading level={6}>About</Heading>
-          </NavLink>
-          <NavLink className={styles["nav-menu-item"]} href="/blog">
-            <Heading level={6}>Blog</Heading>
-          </NavLink>
-          <NavLink className={styles["nav-menu-item"]} href="/experience">
-            <Heading level={6}>Experience</Heading>
-          </NavLink>
-          <NavLink className={styles["nav-menu-item"]} href="/projects">
-            <Heading level={6}>Projects</Heading>
-          </NavLink>
+          {navLinks &&
+            navLinks.map(({ name, id }, i) => (
+              <NavLink
+                key={i}
+                className={styles["nav-menu-item"]}
+                handleClick={() => handleClick(id)}
+              >
+                <Heading level={6}>{name}</Heading>
+              </NavLink>
+            ))}
         </NavMenu>
 
         <div className={styles.hamburger}>
@@ -57,35 +59,41 @@ export const Nav = ({ children }: NavProps) => {
   return <nav className={styles.nav}>{children}</nav>
 }
 
-interface NavLinkProps extends LinkProps {
+interface NavLinkProps {
   children: React.ReactNode
   className?: string
+  handleClick?: () => void
 }
 
-export const NavLink = ({
-  children,
-  href,
-  className,
-  ...linkProps
-}: NavLinkProps) => {
+export const NavLink = ({ children, className, handleClick }: NavLinkProps) => {
   const router = useRouter()
 
   return (
-    <Link {...linkProps} href={href} passHref>
-      <a
-        className={cx(
-          styles["nav-link"],
-          {
-            [styles["nav-link-active"]]:
-              router.asPath === href && router.asPath !== "/",
-          },
-          className,
-        )}
-      >
-        {children}
-      </a>
-    </Link>
+    <a
+      className={cx(styles["nav-link"], className)}
+      onClick={handleClick}
+      onKeyPress={handleClick}
+    >
+      {children}
+    </a>
   )
+
+  // return (
+  //   <Link {...linkProps} href={href} passHref>
+  //     <a
+  //       className={cx(
+  //         styles["nav-link"],
+  //         {
+  //           [styles["nav-link-active"]]:
+  //             router.asPath === href && router.asPath !== "/",
+  //         },
+  //         className,
+  //       )}
+  //     >
+  //       {children}
+  //     </a>
+  //   </Link>
+  // )
 }
 
 export const NavMenu = ({ children }: { children: React.ReactNode }) => {
