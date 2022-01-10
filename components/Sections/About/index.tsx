@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react"
 
 import { srConfig } from "~/constants/config"
+import { skills } from "~/constants/index"
 
 import { Heading, Text } from "~/components/index"
 
@@ -35,8 +36,17 @@ const About = () => {
         AWS for a web app I built on my most recent internship.
         <br />
         <br />
-        {/* Here are some of the technologies I&apos;m proficient with: */}
+        Here are some of the technologies I&apos;ve been working the most with
+        recently:
       </Text>
+      <ul className={styles.skillsList}>
+        {skills &&
+          skills.map((skill, i) => (
+            <li key={i}>
+              <Text size="sm">{skill}</Text>
+            </li>
+          ))}
+      </ul>
     </section>
   )
 }

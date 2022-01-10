@@ -3,6 +3,7 @@ import Image from "next/image"
 
 import { Button, Heading, Link, Text } from "~/components/index"
 import About from "~/components/Sections/About"
+import Experience from "~/components/Sections/Experience"
 
 import styles from "../styles/Home.module.css"
 
@@ -39,6 +40,7 @@ export default function Home() {
         </section>
 
         <About />
+        <Experience />
       </main>
     </div>
   )
