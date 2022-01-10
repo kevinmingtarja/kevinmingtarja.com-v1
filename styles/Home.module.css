@@ -13,48 +13,13 @@
   flex-direction: column;
 }
 
-.heroSection {
-  padding-top: max(30vh, var(--top-inset)) !important;
-}
-
 .main section {
   min-height: 100vh;
   padding-top: 100px;
 }
 
-.introText {
-  margin-bottom: var(--spacing-xs);
-}
-
-.subheading {
-  color: var(--primary-blue);
-}
-
-.info {
-  width: 40vw;
-  margin-top: var(--spacing-lg);
-}
-
-.ctaButton {
-  width: 20vw;
-  margin-top: var(--spacing-3xl);
-}
-
 @media (max-width: 480px) {
-  .container {
-    min-height: 85vh;
-  }
-
   .main {
     padding: 25vh var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
-  }
-
-  .info {
-    width: auto;
-  }
-
-  .ctaButton {
-    min-width: 162.5px;
-    width: 50vw;
   }
 }

@@ -25,15 +25,16 @@ const About = () => {
       <Heading level={1}>About me.</Heading>
 
       <Text className={styles.info}>
-        Hello! I&apos;m a second year computer science undergraduate studying at
-        the National University of Singapore. I enjoy building softwares and
-        have experience in Frontend, Backend, Mobile development.
+        Hi! My name is Kevin and I&apos;m a second year computer science
+        undergraduate studying at the National University of Singapore. I enjoy
+        building softwares and have experience in Frontend, Backend, Mobile
+        development.
         <br />
         <br />
         Recently, I have a newfound love for designing and building technical
         infrastructures in the cloud which started when I was given a chance to
-        design the architecture and build the infrastructure using Terraform and
-        AWS for a web app I built on my most recent internship.
+        design the architecture and build the infrastructure (using Terraform
+        and AWS) for a web app I built during my most recent internship.
         <br />
         <br />
         Here are some of the technologies I&apos;ve been working the most with

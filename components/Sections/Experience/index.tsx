@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react"
 
 import { srConfig } from "~/constants/config"
-import { skills } from "~/constants/index"
 
 import { Heading, Text } from "~/components/index"
 
