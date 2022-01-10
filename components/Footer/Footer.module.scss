@@ -27,8 +27,10 @@
   .footer {
     flex-direction: column;
     padding: 0;
-    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-base);
+
     height: auto;
+    position: relative;
   }
 
   .linkContainerDesktop {

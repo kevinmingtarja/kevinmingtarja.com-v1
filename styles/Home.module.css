@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: var(--spacing-2xl);
+  min-height: 85vh;
 }
 
 .main {
