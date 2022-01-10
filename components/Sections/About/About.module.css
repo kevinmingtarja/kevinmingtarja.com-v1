@@ -31,4 +31,10 @@
   font-size: 17px;
   line-height: 18px;
 }
+
+@media (max-width: 480px) {
+  .info {
+    width: auto;
+  }
+}
 /*# sourceMappingURL=About.module.css.map */

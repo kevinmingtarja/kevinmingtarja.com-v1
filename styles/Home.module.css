@@ -20,6 +20,6 @@
 
 @media (max-width: 480px) {
   .main {
-    padding: 25vh var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   }
 }
