@@ -7,7 +7,7 @@ import { Heading, Text } from "~/components/index"
 import styles from "./Experience.module.css"
 
 const Experience = () => {
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     async function animate() {

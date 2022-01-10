@@ -8,7 +8,7 @@ import { Heading, Text } from "~/components/index"
 import styles from "./About.module.css"
 
 const About = () => {
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     async function animate() {
