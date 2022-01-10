@@ -1,9 +1,8 @@
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .main {

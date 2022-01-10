@@ -22,7 +22,9 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink href="/">
-          <Heading level={5}>Kevin Mingtarja</Heading>
+          <Heading level={5} className={styles.heading}>
+            Kevin Mingtarja
+          </Heading>
         </NavLink>
 
         <NavMenu>

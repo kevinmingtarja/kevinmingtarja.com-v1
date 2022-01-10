@@ -30,7 +30,7 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     transform-origin: 100% 50%;
-    width: 100.6%;
+    width: 99.7%; // To avoid glitchy animation, i suspect this has to be below 100%
   }
 
   &:hover::after {

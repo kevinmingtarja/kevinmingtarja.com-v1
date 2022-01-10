@@ -1,5 +1,5 @@
 .link {
-  opacity: 0.7;
+  // opacity: 0.7;
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -47,7 +47,7 @@
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     transform-origin: 100% 50%;
-    width: 100.5%;
+    width: 100%; // To avoid glitchy animation, i suspect this has to be below 100%
   }
 
   &:hover::after {

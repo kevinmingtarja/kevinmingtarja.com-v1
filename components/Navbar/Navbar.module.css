@@ -1,0 +1,112 @@
+.nav {
+  position: absolute;
+  background-color: var(--white);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: var(--spacing-2xl) var(--spacing-8xl) var(--spacing-xs) var(--spacing-8xl);
+  z-index: 1000;
+}
+
+.nav-link {
+  z-index: inherit;
+  color: var(--true-black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  height: 100%;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-link::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px var(--true-black);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  width: 99.7%;
+}
+
+.nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.nav-link-active {
+  color: var(--primary-blue);
+}
+
+.nav-link-active::after {
+  border-bottom: solid 3px var(--primary-blue);
+}
+
+.nav-menu-item {
+  padding: 0 1rem;
+}
+
+.hamburger {
+  display: none;
+  color: var(--true-black);
+}
+
+.navmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  margin: var(--spacing-sm);
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .navmenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    position: fixed;
+    padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
+  }
+  .info {
+    width: auto;
+  }
+  .ctaButton {
+    min-width: 162.5px;
+    width: 50vw;
+  }
+}
+/*# sourceMappingURL=Navbar.module.css.map */

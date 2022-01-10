@@ -1,11 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import cx from "classnames"
 import Link from "next/link"
 
 import { Heading } from "../index"
 
 import styles from "./Sidebar.module.scss"
-import { SiRedhatopenshift } from "react-icons/si"
 
 const Sidebar = ({
   isOpen,
@@ -14,6 +13,14 @@ const Sidebar = ({
   isOpen: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
 }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+  }, [isOpen])
+
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div

@@ -1,0 +1,74 @@
+.link {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--primary-blue);
+}
+
+.textLink {
+  opacity: 1;
+}
+
+.textLink::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--true-black);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  width: 100.5%;
+}
+
+.textLink:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.nav-link {
+  z-index: inherit;
+  color: var(--true-black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  height: 100%;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-link::after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px var(--true-black);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  width: 100%;
+}
+
+.nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+/*# sourceMappingURL=Link.module.css.map */
