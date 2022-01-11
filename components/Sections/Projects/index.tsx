@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { FiExternalLink, FiGithub, FiMonitor } from "react-icons/fi"
 
 import { Project, projects } from "~/constants/contents"
 import useScrollReveal from "~/hooks/useScrollReveal"
@@ -17,9 +18,11 @@ const Projects = () => {
       <Heading className={styles.sectionHeading} level={1}>
         Projects.
       </Heading>
-      {projects?.map((project, i) => (
-        <ProjectItem key={i} project={project} />
-      ))}
+      <ul className={styles.projectGrid}>
+        {projects?.map((project, i) => (
+          <ProjectItem key={i} project={project} />
+        ))}
+      </ul>
     </section>
   )
 }
@@ -27,34 +30,48 @@ const Projects = () => {
 export default Projects
 
 const ProjectItem = ({ project }: { project: Project }) => {
-  const { name, description, githubLink, websiteLink, technologies } = project
+  const { name, description, image, githubLink, websiteLink, technologies } =
+    project
 
   return (
-    <div className={styles.experienceContainer}>
-      <div className={styles.headingContainer}>
-        <Heading level={5}>{name} </Heading>
+    <li className={styles.projectItemContainer}>
+      <div className={styles.infoContainer}>
+        <div className={styles.iconsContainer}>
+          <FiMonitor size={34} className={styles.monitorIcon} />
+          <div>
+            {githubLink && (
+              <Link href={githubLink}>
+                <FiGithub size={24} className={styles.icon} />
+              </Link>
+            )}
+            {websiteLink && (
+              <Link href={websiteLink}>
+                <FiExternalLink size={24} className={styles.icon} />
+              </Link>
+            )}
+          </div>
+        </div>
+
+        <Heading className={styles.headingContainer} level={5}>
+          {name}
+        </Heading>
+
+        <Text className={styles.description} size="sm">
+          {description}
+        </Text>
       </div>
-
-      {/* <Text className={styles.period}>{period}</Text>
-
-      <ul className={styles.descriptions}>
-        {description &&
-          description.map((desc, i) => (
-            <li key={i}>
-              <Text>{desc}</Text>
-            </li>
-          ))}
-      </ul> */}
-
-      {/* <Text>Technologies used:</Text>
-      <ul className={styles.skillsList}>
-        {technologies &&
-          technologies.map((skill, i) => (
-            <li key={i}>
-              <Text size="sm">{skill}</Text>
-            </li>
-          ))}
-      </ul> */}
-    </div>
+      <footer>
+        <ul className={styles.technologies}>
+          {technologies &&
+            technologies.map((technology, i) => (
+              <li key={i}>
+                <Text className={styles.technology} size="xs">
+                  {technology}
+                </Text>
+              </li>
+            ))}
+        </ul>
+      </footer>
+    </li>
   )
 }

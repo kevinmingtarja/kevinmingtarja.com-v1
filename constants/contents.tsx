@@ -1,3 +1,5 @@
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
+
 export const skills: string[] = [
   "Javascript",
   "Typescript",
@@ -98,7 +100,7 @@ export const projects: Project[] = [
   {
     name: "commIT-design",
     description: "A React reusable components library for NUSSU commIT",
-    image: "",
+    image: "/commit-design.png",
     githubLink: "https://github.com/nussucommit/commit-design",
     websiteLink: "https://www.npmjs.com/package/commit-design",
     technologies: ["React", "Typescript", "Storybook"],
@@ -107,7 +109,7 @@ export const projects: Project[] = [
     name: "Groot",
     description:
       "A simple error logging service written in Go that logs errors to telegram groups using a bot.",
-    image: "",
+    image: "/groot.png",
     githubLink: "https://github.com/kevinmingtarja/groot",
     technologies: ["Go", "Docker", "AWS EC2", "Telegram Bot API"],
   },
@@ -116,9 +118,39 @@ export const projects: Project[] = [
     description:
       "A web app made in collaboration with NUSSU Welfare for NUS students to receive and use eVouchers",
 
-    image: "",
+    image: "/evoucher.png",
     githubLink: "https://github.com/nussucommit/evoucher-frontend",
     websiteLink: "https://evoucher.nussu.org.sg/",
     technologies: ["React", "Typescript", "Django", "PostgreSQL"],
+  },
+]
+
+interface FooterLink {
+  name: string
+  href: string
+  isExternal: boolean
+  icon: any
+}
+
+const size = 24
+
+export const footerLinks: FooterLink[] = [
+  {
+    name: "Github",
+    href: "https://www.github.com/kevinmingtarja",
+    isExternal: true,
+    icon: <SiGithub size={size} />,
+  },
+  {
+    name: "Linkedin",
+    href: "https://linkedin.com/in/kevinmingtarja/",
+    isExternal: true,
+    icon: <SiLinkedin size={size} />,
+  },
+  {
+    name: "Email",
+    href: "mailto:kevin.mingtarja@gmail.com",
+    isExternal: false,
+    icon: <SiGmail size={size} />,
   },
 ]
