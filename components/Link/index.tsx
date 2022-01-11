@@ -8,18 +8,11 @@ interface LinkProps extends React.HTMLProps<HTMLAnchorElement> {
   children: React.ReactNode
   href: string
   className?: string
-  isExternal?: boolean
   type?: "text"
 }
 
-const Link = ({
-  children,
-  href,
-  isExternal,
-  type,
-  className,
-  ...linkProps
-}: LinkProps) => {
+const Link = ({ children, href, type, className, ...linkProps }: LinkProps) => {
+  const isExternal = href.startsWith("http://") || href.startsWith("https://")
   const cn = cx(
     {
       [styles.link]: (children as any).type.name !== "Button",

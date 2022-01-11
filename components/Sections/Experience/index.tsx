@@ -3,10 +3,9 @@ import { useEffect, useRef } from "react"
 import { srConfig } from "~/constants/config"
 import { Experience, experiences } from "~/constants/contents"
 
-import { Heading, Text } from "~/components/index"
+import { Heading, Link, Text } from "~/components/index"
 
 import styles from "./Experience.module.css"
-import Link from "~/components/Link"
 
 const MyExperience = () => {
   const containerRef = useRef<HTMLDivElement>(null)
