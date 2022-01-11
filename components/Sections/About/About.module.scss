@@ -19,7 +19,7 @@
     font-size: var(--fz-xs);
 
     &:before {
-      content: "▹";
+      content: "▹"; // ▹ or >
       position: absolute;
       left: 0;
       color: var(--primary-blue);

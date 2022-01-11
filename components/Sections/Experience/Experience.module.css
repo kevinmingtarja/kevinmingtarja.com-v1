@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=Experience.module.css.map */
+@charset "UTF-8";
+.sectionHeading {
+  margin-bottom: var(--spacing-xl);
+}
+
+.experienceContainer {
+  margin-bottom: var(--spacing-5xl);
+}
+
+.headingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: pre-wrap;
+}
+
+.period {
+  margin-top: var(--spacing-2xs);
+  font-size: var(--font-sm);
+}
+
+.descriptions {
+  padding: 0;
+  margin-top: var(--spacing-md);
+  overflow: hidden;
+  list-style: none;
+}
+
+.descriptions li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: var(--spacing-lg);
+}
+
+.descriptions li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-size: 17px;
+  line-height: 20px;
+}
+/*# sourceMappingURL=Experience.module.css.map */

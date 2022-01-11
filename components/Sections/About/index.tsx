@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 
 import { srConfig } from "~/constants/config"
-import { skills } from "~/constants/index"
+import { skills } from "~/constants/contents"
 
 import { Heading, Text } from "~/components/index"
 
@@ -27,18 +27,17 @@ const About = () => {
       <Text className={styles.info}>
         Hi! My name is Kevin and I&apos;m a second year computer science
         undergraduate studying at the National University of Singapore. I enjoy
-        building softwares and have experience in Frontend, Backend, Mobile
+        building softwares and have experience in Frontend, Backend, and Mobile
         development.
         <br />
         <br />
         Recently, I have a newfound love for designing and building technical
-        infrastructures in the cloud which started when I was given a chance to
+        infrastructures in the cloud, which started when I was given a chance to
         design the architecture and build the infrastructure (using Terraform
         and AWS) for a web app I built during my most recent internship.
         <br />
         <br />
-        Here are some of the technologies I&apos;ve been working the most with
-        recently:
+        Here are some of the technologies I&apos;ve been working with recently:
       </Text>
       <ul className={styles.skillsList}>
         {skills &&
