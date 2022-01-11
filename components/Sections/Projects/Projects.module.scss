@@ -4,8 +4,9 @@
 
 .projectGrid {
   list-style: none;
+  position: relative;
   padding: 0px;
-  margin: 50px 0px 0px;
+  margin: 50px 0px 50px 0px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--spacing-base);
@@ -13,7 +14,6 @@
 
 .projectItemContainer {
   position: relative;
-  margin-bottom: var(--spacing-5xl);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,5 +95,11 @@
 
   li {
     margin-right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }

@@ -4,8 +4,9 @@
 
 .projectGrid {
   list-style: none;
+  position: relative;
   padding: 0px;
-  margin: 50px 0px 0px;
+  margin: 50px 0px 50px 0px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
@@ -15,7 +16,6 @@
 
 .projectItemContainer {
   position: relative;
-  margin-bottom: var(--spacing-5xl);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,5 +121,12 @@
 
 .technologies li {
   margin-right: 15px;
+}
+
+@media (max-width: 480px) {
+  .projectGrid {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 /*# sourceMappingURL=Projects.module.css.map */

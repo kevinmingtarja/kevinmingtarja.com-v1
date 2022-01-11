@@ -30,8 +30,7 @@ const Projects = () => {
 export default Projects
 
 const ProjectItem = ({ project }: { project: Project }) => {
-  const { name, description, image, githubLink, websiteLink, technologies } =
-    project
+  const { name, description, githubLink, websiteLink, technologies } = project
 
   return (
     <li className={styles.projectItemContainer}>
