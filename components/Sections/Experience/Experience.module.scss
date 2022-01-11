@@ -11,6 +11,11 @@
   white-space: pre-wrap;
 }
 
+.link {
+  float: right;
+  position: relative;
+}
+
 .period {
   margin-top: var(--spacing-2xs);
   font-size: var(--font-sm);
@@ -35,5 +40,11 @@
       font-size: 17px;
       line-height: 20px;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .link {
+    float: none;
   }
 }

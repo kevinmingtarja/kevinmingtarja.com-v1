@@ -2,6 +2,7 @@ import { useRef } from "react"
 
 import { Experience, experiences } from "~/constants/contents"
 import useScrollReveal from "~/hooks/useScrollReveal"
+import useWindowDimensions from "~/hooks/useWindowDimensions"
 
 import { Heading, Link, Text } from "~/components/index"
 
@@ -30,13 +31,17 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => {
   const { role, company, period, description, technologies } = experience
   const { name, link } = company
 
+  const { width } = useWindowDimensions()
+
   return (
     <div className={styles.experienceContainer}>
       <div className={styles.headingContainer}>
-        <Heading level={5}>{`${role} @`} </Heading>
-        <Link href={link}>
-          <Heading level={5}>{`${name}`}</Heading>
-        </Link>
+        <Heading level={5}>
+          {width >= 480 ? `${role} @ ` : `${role} \n@ `}
+          <Link className={styles.link} href={link}>
+            {name}
+          </Link>
+        </Heading>
       </div>
 
       <Text className={styles.period}>{period}</Text>

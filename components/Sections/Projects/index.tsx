@@ -1,6 +1,6 @@
 import { useRef } from "react"
 
-import { Experience, experiences } from "~/constants/contents"
+import { Project, projects } from "~/constants/contents"
 import useScrollReveal from "~/hooks/useScrollReveal"
 
 import { Heading, Link, Text } from "~/components/index"
@@ -17,8 +17,8 @@ const Projects = () => {
       <Heading className={styles.sectionHeading} level={1}>
         Projects.
       </Heading>
-      {experiences?.map((experience, i) => (
-        <ExperienceItem key={i} experience={experience} />
+      {projects?.map((project, i) => (
+        <ProjectItem key={i} project={project} />
       ))}
     </section>
   )
@@ -26,20 +26,16 @@ const Projects = () => {
 
 export default Projects
 
-const ExperienceItem = ({ experience }: { experience: Experience }) => {
-  const { role, company, period, description, technologies } = experience
-  const { name, link } = company
+const ProjectItem = ({ project }: { project: Project }) => {
+  const { name, description, githubLink, websiteLink, technologies } = project
 
   return (
     <div className={styles.experienceContainer}>
       <div className={styles.headingContainer}>
-        <Heading level={5}>{`${role} @`} </Heading>
-        <Link href={link}>
-          <Heading level={5}>{`${name}`}</Heading>
-        </Link>
+        <Heading level={5}>{name} </Heading>
       </div>
 
-      <Text className={styles.period}>{period}</Text>
+      {/* <Text className={styles.period}>{period}</Text>
 
       <ul className={styles.descriptions}>
         {description &&
@@ -48,7 +44,7 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => {
               <Text>{desc}</Text>
             </li>
           ))}
-      </ul>
+      </ul> */}
 
       {/* <Text>Technologies used:</Text>
       <ul className={styles.skillsList}>

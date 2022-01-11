@@ -55,3 +55,11 @@
     transform-origin: 0% 50%;
   }
 }
+
+@media (max-width: 480px) {
+  .textLink {
+    &::after {
+      display: none;
+    }
+  }
+}

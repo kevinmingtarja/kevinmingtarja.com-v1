@@ -15,10 +15,11 @@ const Link = ({ children, href, type, className, ...linkProps }: LinkProps) => {
   const isExternal = href.startsWith("http://") || href.startsWith("https://")
   const cn = cx(
     {
-      [styles.link]: (children as any).type.name !== "Button",
+      [styles.link]: (children as any)?.type?.name !== "Button",
       [styles.textLink]:
-        (children as any).type.name === "Text" ||
-        (children as any).type.name === "Heading",
+        (children as any)?.type?.name === "Text" ||
+        (children as any)?.type?.name === "Heading" ||
+        !(children as any)?.type?.name,
     },
     className,
   )
