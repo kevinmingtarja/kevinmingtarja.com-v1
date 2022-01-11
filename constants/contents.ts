@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
       name: "Trustana",
       link: "https://www.trustana.com/",
     },
-    period: "Dec 2021 - Jan 2022",
+    period: "December 2021 - January 2022",
     role: "Software Engineer Intern",
     description: [
       "Spearheaded the effort to build a marketing site using Next.js and a CMS called Plasmic. Containerized it using Docker to facilitate deployment in the cloud",
@@ -43,7 +43,7 @@ export const experiences: Experience[] = [
       name: "National University of Singapore",
       link: "https://www.nus.edu.sg/",
     },
-    period: "Aug 2021 – Dec 2021",
+    period: "August 2021 – December 2021",
     role: "Teaching Assistant",
     description: [
       "Conducted weekly tutorial sessions for 18 students on programming methodology using Python, graded their assignments and provided constructive feedbacks",
@@ -55,7 +55,7 @@ export const experiences: Experience[] = [
       name: "ErudiFi (YC W18)",
       link: "https://www.erudifi.com/",
     },
-    period: "May 2021 – Aug 2021",
+    period: "May 2021 – August 2021",
     role: "Frontend Software Engineer Intern",
     description: [
       "Built the fourth major iteration of our mobile app from scratch using React Native and TypeScript in less than two months with three other engineers. In doing so, we saw a 52.6% increase in conversion rate within three weeks of launching the update",
@@ -82,5 +82,43 @@ export const experiences: Experience[] = [
       "Storybook",
       "PostgreSQL",
     ],
+  },
+]
+
+export interface Project {
+  name: string
+  description: string
+  image: string
+  githubLink: string
+  websiteLink?: string
+  technologies: string[]
+}
+
+export const projects: Project[] = [
+  {
+    name: "commIT-design",
+    description: "A React reusable components library for NUSSU commIT",
+    image: "",
+    githubLink: "https://github.com/nussucommit/commit-design",
+    websiteLink: "https://www.npmjs.com/package/commit-design",
+    technologies: ["React", "Typescript", "Storybook"],
+  },
+  {
+    name: "Groot",
+    description:
+      "A simple error logging service written in Go that logs errors to telegram groups using a bot.",
+    image: "",
+    githubLink: "https://github.com/kevinmingtarja/groot",
+    technologies: ["Go", "Docker", "AWS EC2", "Telegram Bot API"],
+  },
+  {
+    name: "NUSSU eVoucher",
+    description:
+      "A web app made in collaboration with NUSSU Welfare for NUS students to receive and use eVouchers",
+
+    image: "",
+    githubLink: "https://github.com/nussucommit/evoucher-frontend",
+    websiteLink: "https://evoucher.nussu.org.sg/",
+    technologies: ["React", "Typescript", "Django", "PostgreSQL"],
   },
 ]

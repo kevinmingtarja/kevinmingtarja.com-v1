@@ -5,6 +5,7 @@ import { Button, Heading, Link, Text } from "~/components/index"
 import About from "~/components/Sections/About"
 import Experience from "~/components/Sections/Experience"
 import Hero from "~/components/Sections/Hero"
+import Projects from "~/components/Sections/Projects"
 
 import styles from "../styles/Home.module.css"
 
@@ -24,6 +25,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Projects />
       </main>
     </div>
   )

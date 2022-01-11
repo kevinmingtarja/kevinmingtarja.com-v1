@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 
-import { srConfig } from "~/constants/config"
 import { skills } from "~/constants/contents"
+import useScrollReveal from "~/hooks/useScrollReveal"
 
 import { Heading, Text } from "~/components/index"
 
@@ -10,15 +10,7 @@ import styles from "./About.module.css"
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    async function animate() {
-      if (containerRef.current) {
-        const sr = (await import("scrollreveal")).default
-        sr().reveal(containerRef.current, srConfig)
-      }
-    }
-    animate()
-  }, [])
+  useScrollReveal(containerRef)
 
   return (
     <section id="about" ref={containerRef}>
@@ -40,12 +32,11 @@ const About = () => {
         Here are some of the technologies I&apos;ve been working with recently:
       </Text>
       <ul className={styles.skillsList}>
-        {skills &&
-          skills.map((skill, i) => (
-            <li key={i}>
-              <Text size="sm">{skill}</Text>
-            </li>
-          ))}
+        {skills?.map((skill, i) => (
+          <li key={i}>
+            <Text size="sm">{skill}</Text>
+          </li>
+        ))}
       </ul>
     </section>
   )

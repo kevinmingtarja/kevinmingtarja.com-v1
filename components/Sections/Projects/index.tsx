@@ -5,17 +5,17 @@ import useScrollReveal from "~/hooks/useScrollReveal"
 
 import { Heading, Link, Text } from "~/components/index"
 
-import styles from "./Experience.module.css"
+import styles from "./Projects.module.css"
 
-const MyExperience = () => {
+const Projects = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useScrollReveal(containerRef)
 
   return (
-    <section id="experience" ref={containerRef}>
+    <section id="projects" ref={containerRef}>
       <Heading className={styles.sectionHeading} level={1}>
-        Experience.
+        Projects.
       </Heading>
       {experiences?.map((experience, i) => (
         <ExperienceItem key={i} experience={experience} />
@@ -24,7 +24,7 @@ const MyExperience = () => {
   )
 }
 
-export default MyExperience
+export default Projects
 
 const ExperienceItem = ({ experience }: { experience: Experience }) => {
   const { role, company, period, description, technologies } = experience
