@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { FiExternalLink, FiGithub, FiMonitor } from "react-icons/fi"
+import { FiCode, FiExternalLink, FiGithub, FiMonitor } from "react-icons/fi"
 
 import { Project, projects } from "~/constants/contents"
 import useScrollReveal from "~/hooks/useScrollReveal"
@@ -36,16 +36,16 @@ const ProjectItem = ({ project }: { project: Project }) => {
     <li className={styles.projectItemContainer}>
       <div className={styles.infoContainer}>
         <div className={styles.iconsContainer}>
-          <FiMonitor size={34} className={styles.monitorIcon} />
-          <div>
+          <FiCode className={styles.monitorIcon} size={40} />
+          <div className={styles.linkContainer}>
             {githubLink && (
-              <Link href={githubLink}>
-                <FiGithub size={24} className={styles.icon} />
+              <Link className={styles.iconContainer} href={githubLink}>
+                <FiGithub className={styles.icon} size={24} />
               </Link>
             )}
             {websiteLink && (
-              <Link href={websiteLink}>
-                <FiExternalLink size={24} className={styles.icon} />
+              <Link className={styles.iconContainer} href={websiteLink}>
+                <FiExternalLink className={styles.icon} size={24} />
               </Link>
             )}
           </div>

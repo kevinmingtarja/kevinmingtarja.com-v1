@@ -47,9 +47,21 @@
   color: var(--primary-blue);
 }
 
+.linkContainer {
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-left: var(--spacing-sm);
+  height: 24px;
+}
+
 .icon {
   transition: var(--transition);
-  margin-left: var(--spacing-sm);
   position: relative;
   z-index: 1;
 
