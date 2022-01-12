@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 import cx from "classnames"
-import Link from "next/link"
+import scrollToId from "lib/utils/scrollToId"
+
+import { navLinks } from "~/constants/links"
 
 import { Heading } from "../index"
 
@@ -30,18 +32,11 @@ const Sidebar = ({
       <SidebarContainer isOpen={isOpen}>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink href="about">
-              <Heading level={6}>About</Heading>
-            </SidebarLink>
-            <SidebarLink href="discover">
-              <Heading level={6}>Blog</Heading>
-            </SidebarLink>
-            <SidebarLink href="services">
-              <Heading level={6}>Experience</Heading>
-            </SidebarLink>
-            <SidebarLink href="signup">
-              <Heading level={6}>Projects</Heading>
-            </SidebarLink>
+            {navLinks?.map(({ name, id }, i) => (
+              <SidebarLink key={i} handleClick={() => scrollToId(id)}>
+                <Heading level={6}>{name}</Heading>
+              </SidebarLink>
+            ))}
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>
@@ -81,18 +76,21 @@ export const SidebarMenu = ({ children }: { children: React.ReactNode }) => {
 
 export const SidebarLink = ({
   children,
-  href,
+  handleClick,
   color = "",
 }: {
   children: React.ReactNode
-  href: string
+  handleClick?: () => void
   color?: string | undefined
 }) => {
   return (
-    <Link href={href}>
-      <a className={styles.link} style={{ color }}>
-        {children}
-      </a>
-    </Link>
+    <a
+      className={styles.link}
+      onClick={handleClick}
+      onKeyPress={handleClick}
+      style={{ color }}
+    >
+      {children}
+    </a>
   )
 }

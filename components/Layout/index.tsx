@@ -1,5 +1,6 @@
 import Footer from "../Footer"
 import Navbar from "../Navbar"
+import ScrollButton from "../ScrollButton"
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -7,6 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       {children}
       <Footer />
+      <ScrollButton />
     </>
   )
 }

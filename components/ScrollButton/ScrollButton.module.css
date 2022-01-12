@@ -1,0 +1,33 @@
+.btn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--primary-blue);
+  z-index: 99;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--primary-blue-light);
+}
+
+.show {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+/*# sourceMappingURL=ScrollButton.module.css.map */

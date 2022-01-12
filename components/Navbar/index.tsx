@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import cx from "classnames"
 import { Squash as Hamburger } from "hamburger-react"
+import scrollToId from "lib/utils/scrollToId"
 import { useRouter } from "next/router"
 
 import { navLinks } from "~/constants/links"
@@ -15,12 +16,6 @@ interface NavProps {
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false)
-  const handleClick = (id: string) => {
-    const el = document.getElementById(id)
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   return (
     <>
@@ -32,16 +27,15 @@ const Navbar = () => {
         </NavLink>
 
         <NavMenu>
-          {navLinks &&
-            navLinks.map(({ name, id }, i) => (
-              <NavLink
-                key={i}
-                className={styles["nav-menu-item"]}
-                handleClick={() => handleClick(id)}
-              >
-                <Heading level={6}>{name}</Heading>
-              </NavLink>
-            ))}
+          {navLinks?.map(({ name, id }, i) => (
+            <NavLink
+              key={i}
+              className={styles["nav-menu-item"]}
+              handleClick={() => scrollToId(id)}
+            >
+              <Heading level={6}>{name}</Heading>
+            </NavLink>
+          ))}
         </NavMenu>
 
         <div className={styles.hamburger}>

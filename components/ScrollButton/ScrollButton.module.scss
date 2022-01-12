@@ -1,0 +1,25 @@
+.btn {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--primary-blue);
+  z-index: 99;
+  transition: var(--transition);
+
+  &:hover {
+    background-color: var(--primary-blue-light);
+  }
+}
+
+.show {
+  display: inline-flex;
+}
