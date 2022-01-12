@@ -65,7 +65,7 @@
   margin: var(--spacing-sm);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .hamburger {
     display: block;
     z-index: 1001;
@@ -77,12 +77,10 @@
   .navmenu {
     display: none;
   }
-}
 
-@media screen and (max-width: 480px) {
   .nav {
     position: fixed;
-    padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
+    padding: var(--spacing-lg) var(--spacing-3xl) 0 var(--spacing-3xl);
   }
 
   .info {
@@ -90,10 +88,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .nav {
     position: fixed;
-    padding: var(--spacing-lg) var(--spacing-3xl) 0 var(--spacing-3xl);
+    padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
   }
 
   .info {

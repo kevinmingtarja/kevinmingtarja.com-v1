@@ -40,7 +40,7 @@ gives an error on scss.
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .text {
     font-size: var(--font-base);
   }
