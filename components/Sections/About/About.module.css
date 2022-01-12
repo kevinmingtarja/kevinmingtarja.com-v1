@@ -36,5 +36,8 @@
   .info {
     width: auto;
   }
+  .skillsList li:before {
+    line-height: 20px;
+  }
 }
 /*# sourceMappingURL=About.module.css.map */

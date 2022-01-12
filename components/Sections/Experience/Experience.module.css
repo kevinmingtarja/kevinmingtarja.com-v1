@@ -50,5 +50,8 @@
   .link {
     float: none;
   }
+  .descriptions li:before {
+    line-height: 20px;
+  }
 }
 /*# sourceMappingURL=Experience.module.css.map */

@@ -20,11 +20,9 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink>
-          <Heading className={styles.heading} level={5}>
-            Kevin Mingtarja
-          </Heading>
-        </NavLink>
+        <Heading className={styles.heading} level={5}>
+          Kevin Mingtarja
+        </Heading>
 
         <NavMenu>
           {navLinks?.map(({ name, id }, i) => (
