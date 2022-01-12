@@ -1,3 +1,8 @@
+/*
+We use module.css and not module.scss for this because "max(30vh, var(--top-inset))" 
+gives an error on scss.
+*/
+
 .heroSection {
   padding-top: max(30vh, var(--top-inset)) !important;
 }
@@ -32,5 +37,15 @@
   .ctaButton {
     min-width: 162.5px;
     width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: var(--font-base);
+  }
+
+  .info {
+    width: auto;
   }
 }

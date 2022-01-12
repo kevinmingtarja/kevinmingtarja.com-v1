@@ -104,9 +104,15 @@
   .info {
     width: auto;
   }
-  .ctaButton {
-    min-width: 162.5px;
-    width: 50vw;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    padding: var(--spacing-lg) var(--spacing-3xl) 0 var(--spacing-3xl);
+  }
+  .info {
+    width: auto;
   }
 }
 /*# sourceMappingURL=Navbar.module.css.map */

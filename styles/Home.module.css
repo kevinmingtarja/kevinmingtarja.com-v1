@@ -23,3 +23,9 @@
     padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   }
 }
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-3xl) var(--spacing-lg) var(--spacing-3xl);
+  }
+}

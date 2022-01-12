@@ -15,7 +15,7 @@ const Hero = () => {
       <Text className={styles.info}>
         I&apos;m an aspiring software engineer who loves designing and building
         systems and infrastructures. Currently, I&apos;m studying Computer
-        Science @ National University of Singapore.
+        Science at the National University of Singapore.
       </Text>
 
       {/* <Link href="/about">
