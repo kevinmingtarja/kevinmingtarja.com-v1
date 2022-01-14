@@ -23,6 +23,23 @@
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    padding: 2vh var(--spacing-4xl) var(--spacing-xl) var(--spacing-3xl);
+
+    height: auto;
+    position: relative;
+  }
+
+  .linkContainerDesktop {
+    display: none;
+  }
+
+  .linkContainerMobile {
+    display: flex;
+  }
+}
+
 @media (max-width: 480px) {
   .footer {
     flex-direction: column;

@@ -106,7 +106,7 @@
 @media screen and (max-width: 480px) {
   .nav {
     position: fixed;
-    padding: var(--spacing-lg) var(--spacing-base) 0 var(--spacing-base);
+    padding: var(--spacing-lg) var(--spacing-lg) 0 var(--spacing-lg);
   }
   .info {
     width: auto;
