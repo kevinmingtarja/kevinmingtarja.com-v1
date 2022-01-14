@@ -18,14 +18,14 @@
   padding-top: 100px;
 }
 
-@media (max-width: 480px) {
-  .main {
-    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
-  }
-}
-
 @media (max-width: 1024px) {
   .main {
     padding: 0 var(--spacing-3xl) var(--spacing-lg) var(--spacing-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   }
 }

@@ -67,7 +67,7 @@ export const experiences: Experience[] = [
   },
   {
     company: {
-      name: "NUS Students’ Union Committee for Information Technology (NUSSU commIT)",
+      name: "NUS Students’ Union Committee for Information Technology",
       link: "https://www.nussucommit.com/",
     },
     period: "May 2021 - Present",
