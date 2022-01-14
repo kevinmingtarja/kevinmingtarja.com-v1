@@ -36,11 +36,14 @@ const ExperienceItem = ({ experience }: { experience: Experience }) => {
   return (
     <div className={styles.experienceContainer}>
       <div className={styles.headingContainer}>
-        <Heading level={5}>
-          {width >= 740 ? `${role} @ ` : `${role} \n@ `}
-          <Link className={styles.link} href={link}>
-            {name}
-          </Link>
+        <Heading className={styles.title} level={5}>
+          {role}
+          <span>
+            {width >= 769 ? ` @ ` : `@ `}
+            <Link className={styles.link} href={link}>
+              {name}
+            </Link>
+          </span>
         </Heading>
       </div>
 

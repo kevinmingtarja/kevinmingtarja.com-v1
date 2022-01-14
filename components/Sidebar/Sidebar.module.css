@@ -81,4 +81,11 @@
     padding: 0 var(--spacing-3xl);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .menu {
+    margin-top: var(--spacing-base);
+    padding: 0 var(--spacing-lg);
+  }
+}
 /*# sourceMappingURL=Sidebar.module.css.map */

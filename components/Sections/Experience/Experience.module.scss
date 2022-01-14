@@ -11,6 +11,11 @@
   white-space: pre-wrap;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
 .link {
   float: right;
   position: relative;
@@ -43,11 +48,22 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 769px) {
   .link {
     float: none;
   }
+}
 
+@media (min-width: 769px) {
+  .title {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
   .descriptions {
     li {
       &:before {
