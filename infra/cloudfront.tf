@@ -23,6 +23,7 @@ resource "aws_cloudfront_distribution" "cloudfront" {
 
     forwarded_values {
       query_string = false
+      
       cookies {
         forward = "none"
       }
@@ -32,6 +33,28 @@ resource "aws_cloudfront_distribution" "cloudfront" {
 
     min_ttl     = 0
     default_ttl = 43200    # 12 hours
+    max_ttl     = 31536000 # 1 year
+  }
+
+  ordered_cache_behavior {
+    path_pattern     = "/fonts/*"
+    allowed_methods  = ["GET", "HEAD"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = "s3_origin"
+    compress         = false
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    viewer_protocol_policy = "redirect-to-https"
+
+    min_ttl     = 0
+    default_ttl = 259200 # 3 days
     max_ttl     = 31536000 # 1 year
   }
 
