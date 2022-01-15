@@ -4,6 +4,7 @@
     url("/fonts/proxima_nova_regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
     url("/fonts/proxima_nova_bold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -19,4 +21,5 @@
   src: url("/fonts/proxima_nova_semibold-webfont.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
