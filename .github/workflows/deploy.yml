@@ -3,24 +3,26 @@ on:
   push:
     branches: [master]
 jobs:
-  parse-posts:
-    name: Build and deploy
+  build-sync:
     runs-on: ubuntu-latest
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       # setup nodejs environment
       - uses: actions/setup-node@v1
         with:
           node-version: "12"
+
       - name: Install dependencies
         run: npm install
+
       - name: Build and export
         run: npm run build
-      # Upload to S3 requires ENV variables with AWS credentials
-      - name: Upload to S3
+
       - name: Upload to S3
         run: |
           aws s3 sync ./out s3://kevinmingtarja-com-bucket
