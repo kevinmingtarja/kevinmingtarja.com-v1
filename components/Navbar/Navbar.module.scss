@@ -47,6 +47,19 @@
   }
 }
 
+.navTitle {
+  &:hover {
+    color: var(--true-black);
+  }
+}
+
+.navTitleHomePage {
+  pointer-events: none;
+  &::after {
+    display: none;
+  }
+}
+
 .nav-menu-item {
   padding: 0 1rem;
 }

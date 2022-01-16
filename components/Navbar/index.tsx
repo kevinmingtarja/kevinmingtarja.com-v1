@@ -6,7 +6,7 @@ import { useRouter } from "next/router"
 
 import { navLinks } from "~/constants/links"
 
-import { Heading, Sidebar } from "../index"
+import { Heading, Link, Sidebar } from "../index"
 
 import styles from "./Navbar.module.scss"
 
@@ -20,9 +20,11 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <Heading className={styles.heading} level={5}>
-          Kevin Mingtarja
-        </Heading>
+        <NavLink className={styles.navTitle} href="/">
+          <Heading className={styles.heading} level={5}>
+            Kevin Mingtarja
+          </Heading>
+        </NavLink>
 
         <NavMenu>
           {navLinks?.map(({ name, id }, i) => (
@@ -55,37 +57,42 @@ interface NavLinkProps {
   children: React.ReactNode
   className?: string
   handleClick?: () => void
+  href?: string
 }
 
-export const NavLink = ({ children, className, handleClick }: NavLinkProps) => {
+export const NavLink = ({
+  children,
+  className,
+  handleClick,
+  href,
+}: NavLinkProps) => {
   const router = useRouter()
+  const isHomePage = router.pathname === "/"
+
+  if (!href) {
+    return (
+      <a
+        className={cx(styles["nav-link"], className)}
+        onClick={handleClick}
+        onKeyPress={handleClick}
+      >
+        {children}
+      </a>
+    )
+  }
 
   return (
-    <a
-      className={cx(styles["nav-link"], className)}
-      onClick={handleClick}
-      onKeyPress={handleClick}
+    <Link
+      className={cx(
+        styles["nav-link"],
+        { [styles.navTitleHomePage]: isHomePage },
+        className,
+      )}
+      href={href}
     >
       {children}
-    </a>
+    </Link>
   )
-
-  // return (
-  //   <Link {...linkProps} href={href} passHref>
-  //     <a
-  //       className={cx(
-  //         styles["nav-link"],
-  //         {
-  //           [styles["nav-link-active"]]:
-  //             router.asPath === href && router.asPath !== "/",
-  //         },
-  //         className,
-  //       )}
-  //     >
-  //       {children}
-  //     </a>
-  //   </Link>
-  // )
 }
 
 export const NavMenu = ({ children }: { children: React.ReactNode }) => {
