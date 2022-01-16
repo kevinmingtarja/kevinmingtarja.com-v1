@@ -14,6 +14,17 @@ data "aws_iam_policy_document" "s3_policy" {
       identifiers = ["${aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn}"]
     }
   }
+
+  # Needed for cloudfront to be able to access the custom error page
+  statement {
+    actions   = ["s3:ListBucket"]
+    resources = ["${aws_s3_bucket.bucket.arn}"]
+
+    principals {
+      type        = "AWS"
+      identifiers = ["${aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn}"]
+    }
+  }
 }
 
 resource "aws_s3_bucket_policy" "s3_cloudfront_policy" {
