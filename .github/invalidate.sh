@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd out
+
 # Find all html files in the current directory
 arr=($(find . -name "*.html"))
 i=0
