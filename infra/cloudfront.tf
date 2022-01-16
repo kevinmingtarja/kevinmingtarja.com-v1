@@ -23,6 +23,13 @@ resource "aws_cloudfront_distribution" "cloudfront" {
   enabled             = true
   default_root_object = "index.html"
 
+  custom_error_response {
+    error_caching_min_ttl = 60
+    error_code = 404
+    response_code = 404
+    response_page_path = "/404.html"
+  }
+
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
