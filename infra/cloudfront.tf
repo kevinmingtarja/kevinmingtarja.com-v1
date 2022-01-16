@@ -2,6 +2,14 @@ resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "cloudfront origin access identity"
 }
 
+resource "aws_cloudfront_function" "cache_function" {
+  name    = "assets-caching"
+  runtime = "cloudfront-js-1.0"
+  comment = "Adds a Cache-Control header to viewer responses"
+  publish = true
+  code    = file("${path.module}/cacheFunction.js")
+}
+
 resource "aws_cloudfront_distribution" "cloudfront" {
   origin {
     domain_name = aws_s3_bucket.bucket.bucket_regional_domain_name # Regional domain name is needed to prevent redirection issue
@@ -23,7 +31,7 @@ resource "aws_cloudfront_distribution" "cloudfront" {
 
     forwarded_values {
       query_string = false
-      
+
       cookies {
         forward = "none"
       }
@@ -34,6 +42,11 @@ resource "aws_cloudfront_distribution" "cloudfront" {
     min_ttl     = 0
     default_ttl = 43200    # 12 hours
     max_ttl     = 31536000 # 1 year
+
+    function_association {
+      event_type   = "viewer-response"
+      function_arn = aws_cloudfront_function.cache_function.arn
+    }
   }
 
   ordered_cache_behavior {
@@ -54,8 +67,13 @@ resource "aws_cloudfront_distribution" "cloudfront" {
     viewer_protocol_policy = "redirect-to-https"
 
     min_ttl     = 0
-    default_ttl = 259200 # 3 days
+    default_ttl = 259200   # 3 days
     max_ttl     = 31536000 # 1 year
+
+    function_association {
+      event_type   = "viewer-response"
+      function_arn = aws_cloudfront_function.cache_function.arn
+    }
   }
 
   restrictions {
