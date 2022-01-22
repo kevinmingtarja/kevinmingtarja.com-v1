@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build, deploy, invalidate cache
 on:
   push:
     branches: [master]
@@ -33,7 +33,7 @@ jobs:
       - name: Sync build files to S3
         run: aws s3 sync ./out s3://kevinmingtarja-com-bucket
 
-      - name: Invalidate index.html
+      - name: Invalidate html files
         run: |
           chmod +x "${GITHUB_WORKSPACE}/.github/invalidate.sh"
 
