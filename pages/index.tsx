@@ -18,6 +18,15 @@ export default function Home() {
           content="I'm a second year student at NUS studying Computer Science at NUS"
           name="description"
         />
+        {/* <meta property="og:title" content="TITLE" /> */}
+        <meta
+          property="og:image"
+          content="https://kevin-sandbox.s3.ap-southeast-1.amazonaws.com/thumbnail.png"
+        />
+        <meta property="og:url" content="https://www.kevinmingtarja.com" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+        <meta property="og:type" content="website" />
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
