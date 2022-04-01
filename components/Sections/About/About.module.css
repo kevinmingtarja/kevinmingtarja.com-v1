@@ -1,4 +1,21 @@
 @charset "UTF-8";
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-top: var(--spacing-lg);
+  margin-left: var(--spacing-7xl);
+}
+
+.image {
+  border-radius: var(--border-radius);
+}
+
 .info {
   width: 40vw;
   margin-top: var(--spacing-lg);
@@ -38,6 +55,12 @@
   }
   .skillsList li:before {
     line-height: 20px;
+  }
+  .image-container {
+    display: none;
+  }
+  .image {
+    display: none;
   }
 }
 /*# sourceMappingURL=About.module.css.map */
