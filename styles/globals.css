@@ -99,7 +99,7 @@ code {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   /* BORDER */
-  --border-radius: 8px;
+  --border-radius: 6px;
   --border-solid-light: 1px solid var(--border-light);
 
   /* TRANSITIONS */

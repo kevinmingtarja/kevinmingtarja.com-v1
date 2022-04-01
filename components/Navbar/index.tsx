@@ -36,6 +36,10 @@ const Navbar = () => {
               <Heading level={6}>{name}</Heading>
             </NavLink>
           ))}
+
+          <NavLink className={styles["nav-menu-item"]} href="/resume.pdf">
+            <Heading level={6}>Resume</Heading>
+          </NavLink>
         </NavMenu>
 
         <div className={styles.hamburger}>
@@ -67,7 +71,8 @@ export const NavLink = ({
   href,
 }: NavLinkProps) => {
   const router = useRouter()
-  const isHomePage = router.pathname === "/"
+  const isHomePage = router.pathname === "/" && href === "/"
+  const isAttachment = href?.includes(".")
 
   if (!href) {
     return (
@@ -75,6 +80,19 @@ export const NavLink = ({
         className={cx(styles["nav-link"], className)}
         onClick={handleClick}
         onKeyPress={handleClick}
+      >
+        {children}
+      </a>
+    )
+  }
+
+  if (isAttachment) {
+    return (
+      <a
+        className={cx(styles["nav-attachment"], className)}
+        href={href}
+        rel="noreferrer"
+        target="_blank"
       >
         {children}
       </a>
