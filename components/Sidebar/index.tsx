@@ -37,6 +37,10 @@ const Sidebar = ({
                 <Heading level={6}>{name}</Heading>
               </SidebarLink>
             ))}
+
+            <SidebarLink href="/resume.pdf">
+              <Heading level={6}>Resume</Heading>
+            </SidebarLink>
           </SidebarMenu>
         </SidebarWrapper>
       </SidebarContainer>
@@ -76,13 +80,23 @@ export const SidebarMenu = ({ children }: { children: React.ReactNode }) => {
 
 export const SidebarLink = ({
   children,
+  href,
   handleClick,
   color = "",
 }: {
   children: React.ReactNode
+  href?: string
   handleClick?: () => void
   color?: string | undefined
 }) => {
+  if (href) {
+    return (
+      <a className={styles.link} href={href} rel="noreferrer" target="_blank">
+        {children}
+      </a>
+    )
+  }
+
   return (
     <a
       className={styles.link}

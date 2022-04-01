@@ -6,7 +6,6 @@ import useScrollReveal from "~/hooks/useScrollReveal"
 import { Heading, Text } from "~/components/index"
 
 import styles from "./About.module.css"
-import Image from "next/image"
 
 const About = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -45,11 +44,10 @@ const About = () => {
           </ul>
         </div>
         <div className={styles["image-container"]}>
-          <Image
-            alt="Picture of the author"
+          <img
+            alt="me"
             className={styles.image}
             height={300}
-            quality={100}
             src="/portrait.jpg"
             width={300}
           />
