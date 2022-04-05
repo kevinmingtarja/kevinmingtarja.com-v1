@@ -89,7 +89,7 @@ export const NavLink = ({
   if (isAttachment) {
     return (
       <a
-        className={cx(styles["nav-attachment"], className)}
+        className={cx(styles["nav-link"], styles["nav-attachment"], className)}
         href={href}
         rel="noreferrer"
         target="_blank"
