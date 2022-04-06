@@ -98,6 +98,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: "Omega (In progress)",
+    description:
+      "A cloud-based, IDE. Behind the scenes, each session is being run in its own Docker container inside an EC2 instance",
+    image: "/groot.png",
+    githubLink: "https://github.com/kevinmingtarja/omega",
+    technologies: ["Next.js", "Node", "Docker", "AWS EC2"],
+  },
+  {
+    name: "Lexiko (In progress)",
+    description:
+      "A dynamic DNS server built with Go and Redis that is made for project Omega",
+    image: "/groot.png",
+    githubLink: "https://github.com/kevinmingtarja/lexiko",
+    technologies: ["Go", "Redis", "Docker", "AWS EC2"],
+  },
+  {
     name: "commIT-design",
     description: "A React reusable components library for NUSSU commIT",
     image: "/commit-design.png",
