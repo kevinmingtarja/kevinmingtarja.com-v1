@@ -29,6 +29,43 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     company: {
+      name: "Dgraph Labs",
+      link: "https://dgraph.io/",
+    },
+    period: "August 2022 - Present",
+    role: "Software Engineer Intern",
+    description: ["Building the #1 open source graph database"],
+    technologies: [
+      "Django",
+      "MySQL",
+      "Elasticsearch",
+      "Redis",
+      "Celery",
+      "React",
+    ],
+  },
+  {
+    company: {
+      name: "Sea Labs (NYSE: SE)",
+      link: "https://www.sea.com/home",
+    },
+    period: "May 2022 - August 2022",
+    role: "Software Engineer Intern",
+    description: [
+      "In charge of developing a research paper search engine for the researchers at Sea AI Labs (SAIL) using Django, MySQL, Elasticsearch, Redis, Celery, and React",
+      "Built an analytics platform to track user actions on an internal software and keep track of various key metrics",
+    ],
+    technologies: [
+      "Django",
+      "MySQL",
+      "Elasticsearch",
+      "Redis",
+      "Celery",
+      "React",
+    ],
+  },
+  {
+    company: {
       name: "Trustana",
       link: "https://www.trustana.com/",
     },
