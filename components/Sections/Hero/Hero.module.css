@@ -25,6 +25,10 @@ gives an error on scss.
   margin-top: var(--spacing-3xl);
 }
 
+.link {
+  display: inline-block;
+}
+
 @media (max-width: 1024px) {
   .text {
     font-size: var(--font-base);

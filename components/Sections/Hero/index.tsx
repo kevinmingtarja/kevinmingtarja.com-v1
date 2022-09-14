@@ -1,8 +1,14 @@
-import { Heading, Text } from "~/components/index"
+import link from "next/link"
+
+import useWindowDimensions from "~/hooks/useWindowDimensions"
+
+import { Heading, Link, Text } from "~/components/index"
 
 import styles from "./Hero.module.css"
 
 const Hero = () => {
+  const { width } = useWindowDimensions()
+
   return (
     <section className={styles.heroSection} id="hero">
       <Text className={styles.introText}>Hey there! My name is</Text>
@@ -14,8 +20,12 @@ const Hero = () => {
 
       <Text className={styles.info}>
         I&apos;m an aspiring software engineer who loves designing and building
-        systems and infrastructures. Currently, I&apos;m studying Computer
-        Science at the National University of Singapore.
+        systems and infrastructures. Currently, I&apos;m in the Bay Area,
+        building distributed graph databases @{" "}
+        <div className={styles.link}>
+          <Link href="https://dgraph.io/">Dgraph Labs</Link>
+        </div>
+        .
       </Text>
 
       {/* <Link href="/about">
