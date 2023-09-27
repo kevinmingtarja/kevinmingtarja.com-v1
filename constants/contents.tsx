@@ -101,7 +101,7 @@ export interface Project {
   name: string
   description: string
   image: string
-  githubLink: string
+  githubLink?: string
   websiteLink?: string
   technologies: string[]
 }
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     description:
       "SkillDeck is a portfolio builder that three of my friends and I built. The frontend is written in Typescript and React, while the backend is in Node.js and Express",
     image: "/groot.png",
-    githubLink: "https://www.skilldeck.io/",
+    websiteLink: "https://www.skilldeck.io/",
     technologies: ["React", "Typescript", "Node.js", "Express"],
   },
   {
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     description:
       "pg-schema-diff is a Go library and CLI for diffing Postgres schemas and generating SQL migrations. I wrote a new feature to visualize the SQL dependency graph by encoding the internal graph struct to DOT format, allowing it to be displayed by GraphViz",
     image: "/groot.png",
-    githubLink: "https://github.com/kevinmingtarja/lexiko",
+    githubLink: "https://github.com/stripe/pg-schema-diff",
     technologies: ["Go", "Postgres"],
   },
   {
@@ -128,8 +128,8 @@ export const projects: Project[] = [
     description:
       "P2ST is an LLM app that utilizes ChatGPT to help students in the National University of Singapore (NUS) in their learning process",
     image: "/commit-design.png",
-    githubLink: "https://github.com/nussucommit/commit-design",
-    websiteLink: "https://www.npmjs.com/package/commit-design",
+    githubLink: "https://github.com/cnlinh/p2st",
+    websiteLink: "https://p2st.comp.nus.edu.sg/",
     technologies: ["Django", "Postgres", "Linux", "Docker"],
   },
 ]
