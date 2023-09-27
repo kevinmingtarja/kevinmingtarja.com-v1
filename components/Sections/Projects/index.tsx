@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <section id="projects" ref={containerRef}>
       <Heading className={styles.sectionHeading} level={1}>
-        Projects.
+        Projects & Open Source.
       </Heading>
       <ul className={styles.projectGrid}>
         {projects?.map((project, i) => (

@@ -1,16 +1,16 @@
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
 
 export const skills: string[] = [
-  "Javascript",
-  "Typescript",
-  "React",
-  "Next.js",
   "Go",
   "Python",
-  // "Django",
-  // "Java",
-  "Terraform",
+  "Kubernetes",
   "Docker",
+  "Terraform",
+  "Prometheus",
+  "Grafana",
+  "Django",
+  "Java",
+  "React/Typescript",
 ]
 
 interface Company {
@@ -32,9 +32,14 @@ export const experiences: Experience[] = [
       name: "Dgraph Labs",
       link: "https://dgraph.io/",
     },
-    period: "August 2022 - Present",
+    period: "August 2022 - July 2023",
     role: "Software Engineer Intern",
-    description: ["Building the #1 open source graph database"],
+    description: [
+      "Dgraph Labs is the company behind Dgraph, an open source, distributed graph database",
+      "Worked on the backend and infrastructure of Dgraph Cloud, a managed Database-as-a-Service built on top of Kubernetes, AWS, and a few services written in Go",
+      "Managed hundreds of customer databases on Kubernetes, and performed ops/on-call duties including deployments, Kubernetes upgrades, writing automations, monitoring, and incident management. Achieved > 99.9% uptime over the past year",
+      "Led the effort to codify our cloud infrastructure with Terraform and drove it to completion",
+    ],
     technologies: [
       "Django",
       "MySQL",
@@ -50,10 +55,10 @@ export const experiences: Experience[] = [
       link: "https://www.sea.com/home",
     },
     period: "May 2022 - August 2022",
-    role: "Software Engineer Intern",
+    role: "Backend Engineer Intern",
     description: [
-      "In charge of developing a research paper search engine for the researchers at Sea AI Labs (SAIL) using Django, MySQL, Elasticsearch, Redis, Celery, and React",
-      "Built an analytics platform to track user actions on an internal software and keep track of various key metrics",
+      "Developed a research paper search engine using Django, MySQL, and Elasticsearch for research scientists at Sea AI Labs (SAIL), which enabled them to search through hundreds of thousands of papers, receive curated lists, and subscribe to daily newsletters",
+      "In charge of the release process for the app, which includes writing pre-release checklists, schema migrations, and deployments",
     ],
     technologies: [
       "Django",
@@ -79,18 +84,6 @@ export const experiences: Experience[] = [
   },
   {
     company: {
-      name: "National University of Singapore",
-      link: "https://www.nus.edu.sg/",
-    },
-    period: "August 2021 – December 2021",
-    role: "Teaching Assistant",
-    description: [
-      "Conducted weekly tutorial sessions for 18 students on programming methodology using Python, graded their assignments and provided constructive feedbacks",
-    ],
-    technologies: ["Python"],
-  },
-  {
-    company: {
       name: "ErudiFi (YC W18)",
       link: "https://www.erudifi.com/",
     },
@@ -101,26 +94,6 @@ export const experiences: Experience[] = [
       "Built and maintained our own UI components library to cut down development time significantly and used Storybook to document them",
     ],
     technologies: ["React Native", "Typescript", "Storybook"],
-  },
-  {
-    company: {
-      name: "NUS Students’ Union Committee for Information Technology",
-      link: "https://www.nussucommit.com/",
-    },
-    period: "May 2021 - Present",
-    role: "Technical Director",
-    description: [
-      "Leads and mentors a multinational team of 15 engineers on Git, database design, Python, Django, HTML, CSS, Javascript, and React",
-      "Created and continuously developed a React reusable components library and published it to npm. And documented our components library using Storybook",
-    ],
-    technologies: [
-      "Typescript",
-      "React",
-      "Python",
-      "Django",
-      "Storybook",
-      "PostgreSQL",
-    ],
   },
 ]
 
@@ -135,46 +108,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Omega (In progress)",
+    name: "SkillDeck",
     description:
-      "A cloud-based, IDE. Behind the scenes, each session is being run in its own Docker container inside an EC2 instance",
+      "SkillDeck is a portfolio builder that three of my friends and I built. The frontend is written in Typescript and React, while the backend is in Node.js and Express",
     image: "/groot.png",
-    githubLink: "https://github.com/kevinmingtarja/omega",
-    technologies: ["Next.js", "Node", "Docker", "AWS EC2"],
+    githubLink: "https://www.skilldeck.io/",
+    technologies: ["React", "Typescript", "Node.js", "Express"],
   },
   {
-    name: "Lexiko (In progress)",
+    name: "stripe/pg-schema-diff",
     description:
-      "A dynamic DNS server built with Go and Redis that is made for project Omega",
+      "pg-schema-diff is a Go library and CLI for diffing Postgres schemas and generating SQL migrations. I wrote a new feature to visualize the SQL dependency graph by encoding the internal graph struct to DOT format, allowing it to be displayed by GraphViz",
     image: "/groot.png",
     githubLink: "https://github.com/kevinmingtarja/lexiko",
-    technologies: ["Go", "Redis", "Docker", "AWS EC2"],
+    technologies: ["Go", "Postgres"],
   },
   {
-    name: "commIT-design",
-    description: "A React reusable components library for NUSSU commIT",
+    name: "P2ST",
+    description:
+      "P2ST is an LLM app that utilizes ChatGPT to help students in the National University of Singapore (NUS) in their learning process",
     image: "/commit-design.png",
     githubLink: "https://github.com/nussucommit/commit-design",
     websiteLink: "https://www.npmjs.com/package/commit-design",
-    technologies: ["React", "Typescript", "Storybook"],
-  },
-  {
-    name: "Groot",
-    description:
-      "A simple error logging service written in Go that logs errors to telegram groups using a bot.",
-    image: "/groot.png",
-    githubLink: "https://github.com/kevinmingtarja/groot",
-    technologies: ["Go", "Docker", "AWS EC2", "Telegram Bot API"],
-  },
-  {
-    name: "NUSSU eVoucher",
-    description:
-      "A web app made in collaboration with NUSSU Welfare for NUS students to receive and use eVouchers",
-
-    image: "/evoucher.png",
-    githubLink: "https://github.com/nussucommit/evoucher-frontend",
-    websiteLink: "https://evoucher.nussu.org.sg/",
-    technologies: ["React", "Typescript", "Django", "PostgreSQL"],
+    technologies: ["Django", "Postgres", "Linux", "Docker"],
   },
 ]
 
